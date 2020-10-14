@@ -7,19 +7,20 @@
  * For the classes provided by the primer, see https://unpkg.com/@primer/css/dist/primer.css
  */
 
+
+/* -- BODY --------------------------------------------------------------------------------*/
+
+body {
+   display: inline-block; /* Makes sidebar "sticky" */ 
+}
+
 /* -- FOOTER ------------------------------------------------------------------------------- */
 
-div.footer {
+/*div.footer {
     width: 100%;
-}
+}*/
 
 /* -- PRIVACY NOTICE ----------------------------------------------------------------------- */
-
-div.privacy {
-    text-align: right;
-    padding-right: 5%;
-    padding-bottom: 20px;
-}
 
 code {
     font-size: 0.9em !important; /* makes code snippets in headings the correct size */
@@ -30,16 +31,21 @@ code {
 div.body {
     max-width: 100%;
     min-width: unset;
+    padding: 0;
 }
 
 div.body li {
     margin: 0 0 0.5em 0; /* Increase spacing between list items */
 }
 
+article {
+    min-height: calc(100vh - 148px); /* Makes sure GitHub footer stays at bottom of viewport */
+}
+
 /* -- SIDEBAR ------------------------------------------------------------------------------- */
 
 .SideNav {
-    height: 100vh;
+    min-height: calc(100vh - 68px);  /* Makes sure sidebar doesn't cover GitHub footer */
 }
 
 .SideNav li {
